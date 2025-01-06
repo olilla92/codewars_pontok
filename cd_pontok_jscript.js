@@ -1,4 +1,4 @@
-document.getElementById('usernameForm').addEventListener('submit', function(event) {
+document.getElementById('belepes').addEventListener('submit', function(event) {
     event.preventDefault();
     const username = document.getElementById('username').value;
     fetchUserData(username);
@@ -13,13 +13,13 @@ function fetchUserData(username) {
             displayUserCard(data);
         })
         .catch(error => {
-            alert('Hiba történt a felhasználói adatok betöltésekor.');
+            alert('A felhasználói adatok betöltésekor hiba történt.');
             console.error(error);
         });
 }
 
 function displayUserCard(user) {
-    const userCardsContainer = document.getElementById('userCardsContainer');
+    const userCardsContainer = document.getElementById('cardcontainer');
     
     const card = document.createElement('div');
     card.classList.add('user-card');
